@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  font-family: 'Fraunces', serif;
+}
+
+.header-container {
+  display: flex;  
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 20px 5%; 
+}
+
+#header-txt {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 8px 15px;
+  border: 3px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style-type: none; 
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 30px; 
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: 0.3s; 
+}
+
+nav a:hover {
+  opacity: 0.6;
+}
+
+#header-img {
+  display: block; 
+  margin: 0 auto; 
+  width: auto;
+  height: 600px; 
+  border-radius: 10px;
+}
+
+hr {
+  margin: 20px 0;
+  border: solid 3px red
+}
+
+.header-2 {
+  text-align: center;
+  font-size: 44px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.descriptive {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* This code only runs on screens narrower than 600px (phones) */
+@media (max-width: 600px) {
+  
+  .descriptive {
+    margin: 20px; /* Gives a simple 20px gap on all sides */
+    position: static; /* Standard scrolling behavior */
+    text-align: center; /* Looks better on small screens */
+  }
+
+  #header-img {
+    width: 90%; /* Make the image bigger so it's readable on a phone */
+  }
+
+  .header-container {
+    flex-direction: column; /* Stacks your logo and nav vertically */
+    gap: 20px;
+  }
+}
+
+label {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+form {
+  display: flex;
+  flex-direction: column; /* Stacks items top-to-bottom */
+  align-items: center;    /* Centers everything horizontally */
+  justify-content: center;
+  gap: 10px;              /* This creates the space between inputs automatically! */
+  width: 90%;             /* Good for phones */
+  max-width: 400px;       /* Good for computers */
+  margin: 0 auto;         /* Centers the whole form box on the page */
+}
+
+input, textarea {
+  width: 100%;            /* Makes them all the same width */
+  padding: 10px;
+  text-align: center;     /* Centers the text you type inside */
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+}
