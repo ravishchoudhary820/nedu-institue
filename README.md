@@ -1,1 +1,1 @@
-My blog website where there is a homepage, css file and another site for my actual blogs. In the first page, you see a hompage where you have about me and a functioning contact section and a hyperlink to see the blog.
+This is the official website of Nedu Institute. Here you have our courses and articles and an About Us page.
