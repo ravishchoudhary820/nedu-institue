@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Prevents padding from breaking width calculations */
+  font-family: Roboto;
+}
+
+/* --- Keep Header elements horizontal --- */
+header {
+  display: flex;
+  justify-content: space-between; /* Pushes logo left, nav right */
+  align-items: center; /* Centers them vertically */
+  padding: 20px;
+}
+
+nav ul {
+  display: flex; /* Makes the list items stay in a row */
+  list-style: none; /* Removes bullet points */
+  gap: 20px; /* Modern spacing between links */
+}
+
+nav a {
+  text-decoration: none; /* Removes underlines */
+  color: black;
+}
+
+#pic {
+  width: 270px;
+  height: auto
+}
+
+hr {
+  margin: 20px 0;
+  border: 2px solid #396ea3
+}
+
+h1 {
+  text-align: center;
+  font-size: 44px;
+}
+
+#us {
+  font-size: 18px;
+  text-align: center;
+}
+
+#articles {
+  display: flex;       /* This aligns them in a row */
+  flex-wrap: wrap;    /* Allows them to move to the next line if screen is small */
+  justify-content: center;
+}
+
+#articles article {
+  display: flex;       /* New: make the article itself a flex container */
+  flex-direction: column; /* Stack content vertically */
+  width: 25%;
+  margin: 20px;
+  padding: 20px;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.article-pics {
+  width: 100%;
+  margin: auto;
+}
+
+/* This targets the actual link wrapping your article content */
+#articles article a {
+  text-decoration: none !important; /* Forces the underline to stay away */
+  color: black;                   /* Keeps the text from turning blue */
+}
+
+/* This ensures the h3 inside that link also behaves */
+#articles article a h3 {
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+footer > p {
+  font-size: 12px;
+  text-align: center;
+  display: block;
+  padding: 7px;
+}
+
+#footer-top {
+  margin-top: 100px;
+}
+
+footer {
+  background-color: #D3D3D3;
+}
+
+/* --- Standardized Header for All Pages --- */
+header {
+  display: flex;
+  flex-direction: column; /* Stacks Logo on top of Nav */
+  align-items: center;    /* Centers everything horizontally */
+  padding: 30px 20px;
+  background-color: #ffffff; /* Clean white background */
+  gap: 20px;               /* Space between logo and links */
+  border-bottom: 1px solid #eee; /* Optional: adds a subtle divider line */
+}
+
+/* Logo Styling */
+#pic {
+  width: 280px;
+  height: auto;
+  display: block;
+}
+
+/* Navigation Menu */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;              /* Spacing between menu items */
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation Links */
+.nav, nav ul li a {
+  text-decoration: none;
+  color: #1a2b48;         /* Signature InfoFlow Navy */
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.nav:hover, nav ul li a:hover {
+  color: #396ea3;         /* Subtle blue highlight on hover */
+}
+
+/* --- Mobile Fix for Header --- */
+@media screen and (max-width: 600px) {
+  #pic {
+    width: 220px;         /* Smaller logo for mobile screens */
+  }
+  
+  nav ul {
+    flex-wrap: wrap;      /* Allows links to wrap if screen is very narrow */
+    justify-content: center;
+    gap: 15px;
+  }
+}
